@@ -1,13 +1,11 @@
 import getReady
 import NewLogic
 
-#preparar.prepararTodo()
 clear()
-getReady.getEverythingReady(1,5)
+carrotRows = 3
+treeRows = 9
+getReady.getEverythingReady(carrotRows,treeRows)
 
 while True:
-	#logic.plantCarrot()
-	#logic.plantTree()
-	#logic.plantTree()
-	NewLogic.plantCarrot(1)
-	NewLogic.plantTree(5)
+	NewLogic.plantCarrot(carrotRows)
+	NewLogic.plantTree(treeRows)

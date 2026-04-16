@@ -8,6 +8,7 @@ def getCarrotsReady(carrotLines):
 	for i in range(carrotLines):
 		for j in range(get_world_size()):
 			till()
+			plant(Entities.Carrot)
 			move(North)
 		move(East)
 	
