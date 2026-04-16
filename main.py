@@ -1,5 +1,3 @@
-import preparar
-import logic
 import getReady
 import NewLogic
 
