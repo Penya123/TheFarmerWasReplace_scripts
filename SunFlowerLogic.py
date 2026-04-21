@@ -4,6 +4,7 @@ import regar
 def getSunflowerReady(sunflowerLines):
 	for i in range(sunflowerLines):
 		for j in range(get_world_size()):
+			harvest()
 			NewLogic.tillNonSoilGround(get_ground_type())
 			plant(Entities.Sunflower)
 			regar.regar(get_water())

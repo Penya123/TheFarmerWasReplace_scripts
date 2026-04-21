@@ -14,8 +14,8 @@ import pumkinLogic
 # Esto esta sujeto a cambios durante el desarrollo
 clear()
 wosi = get_world_size() # the world size
-carrotRows = 3
-treeRows = 9
+carrotRows = 5
+treeRows = 7
 
 while True:
 	
@@ -27,8 +27,7 @@ while True:
 		while not pumkinLogic.isPumkinCompleted(wosi):
 			pumkinLogic.maintainPumkins(wosi)
 		harvest()
-	getReady.getCarrotsReady(carrotRows)
-	getReady.getTreesReady(treeRows)
+	getReady.getEverythingReady(carrotRows, treeRows)
 	for i in range(3):
 		NewLogic.plantCarrot(carrotRows)
 		NewLogic.plantTree(treeRows)
