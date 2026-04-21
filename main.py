@@ -17,15 +17,18 @@ wosi = get_world_size() # the world size
 carrotRows = 3
 treeRows = 9
 
-SunFlowerLogic.getSunflowerReady(wosi)
-SunFlowerLogic.farmSunflowers(3)
-
-pumkinLogic.getPumkinGroundReady(wosi)
-while not pumkinLogic.isPumkinCompleted(wosi):
-	pumkinLogic.maintainPumkins(wosi)
-harvest()
-# getReady.getEverythingReady(carrotRows,treeRows)
-
-#while True:
-	#NewLogic.plantCarrot(carrotRows)
-	#NewLogic.plantTree(treeRows)
+while True:
+	
+	SunFlowerLogic.getSunflowerReady(wosi)
+	SunFlowerLogic.farmSunflowers(3)
+	
+	for i in range(3):
+		pumkinLogic.getPumkinGroundReady(wosi)
+		while not pumkinLogic.isPumkinCompleted(wosi):
+			pumkinLogic.maintainPumkins(wosi)
+		harvest()
+	getReady.getCarrotsReady(carrotRows)
+	getReady.getTreesReady(treeRows)
+	for i in range(3):
+		NewLogic.plantCarrot(carrotRows)
+		NewLogic.plantTree(treeRows)
