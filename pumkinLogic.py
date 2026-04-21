@@ -1,34 +1,11 @@
 import regar
-
-def plantPumkin(squareSize):
-	for i in range(squareSize):
-		for j in range(squareSize):
-			if not get_ground_type() == Grounds.Soil:
-				till()
-				regar.regar(get_water())
-			while True:
-				if can_harvest():
-					break
-				plant(Entities.Pumpkin)
-			move(North)
-			if get_pos_y() >= squareSize:
-				while True:
-					move(North)
-					if get_pos_y() >= (get_world_size() - 1):
-						move(North)
-						break
-		if i >= (squareSize - 1):
-			harvest()
-			move(East)
-			break
-		else:
-			move(East)
-
+import NewLogic
 
 def getPumkinGroundReady(squareSize):
 	for i in range(squareSize):
 		for j in range(squareSize):
-			till()
+			harvest()
+			NewLogic.tillNonSoilGround(get_ground_type())
 			plant(Entities.Pumpkin)
 			regar.regar(get_water())
 			move(North)

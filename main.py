@@ -1,5 +1,7 @@
 import getReady
 import NewLogic
+import SunFlowerLogic
+import pumkinLogic
 
 # DESCRIPCIÓN DEL FLUJO
 # Primero se plantan girasoles en 
@@ -11,10 +13,19 @@ import NewLogic
 #
 # Esto esta sujeto a cambios durante el desarrollo
 clear()
+wosi = get_world_size() # the world size
 carrotRows = 3
 treeRows = 9
-getReady.getEverythingReady(carrotRows,treeRows)
 
-while True:
-	NewLogic.plantCarrot(carrotRows)
-	NewLogic.plantTree(treeRows)
+SunFlowerLogic.getSunflowerReady(wosi)
+SunFlowerLogic.farmSunflowers(3)
+
+pumkinLogic.getPumkinGroundReady(wosi)
+while not pumkinLogic.isPumkinCompleted(wosi):
+	pumkinLogic.maintainPumkins(wosi)
+harvest()
+# getReady.getEverythingReady(carrotRows,treeRows)
+
+#while True:
+	#NewLogic.plantCarrot(carrotRows)
+	#NewLogic.plantTree(treeRows)

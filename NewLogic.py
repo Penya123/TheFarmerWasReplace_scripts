@@ -22,3 +22,11 @@ def plantTree(TreeLines):
 			regar.regar(get_water())
 			move(North)
 		move(East)
+
+def tillNonSoilGround(ground):
+	if ground != Grounds.Soil:
+		till()
+		
+def untillSoilGround(ground):
+	if ground == Grounds.Soil:
+		return till()

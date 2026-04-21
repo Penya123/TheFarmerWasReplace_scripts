@@ -1,3 +1,4 @@
+import NewLogic
 
 def getEverythingReady(carrotLines, TreeLines):
 	getCarrotsReady(carrotLines)
@@ -7,7 +8,7 @@ def getEverythingReady(carrotLines, TreeLines):
 def getCarrotsReady(carrotLines):
 	for i in range(carrotLines):
 		for j in range(get_world_size()):
-			till()
+			NewLogic.tillNonSoilGround(get_ground_type())
 			plant(Entities.Carrot)
 			move(North)
 		move(East)
