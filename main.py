@@ -12,17 +12,18 @@ import pumkinLogic
 # 3 lineas de zanahorias y 9 de arboles y trigo
 #
 # Esto esta sujeto a cambios durante el desarrollo
+
 clear()
 wosi = get_world_size() # the world size
-carrotRows = 5
-treeRows = 7
+carrotRows = 9 # filas de zanahorias
+treeRows = 13 # filas de arboles
 
 while True:
 	
 	SunFlowerLogic.getSunflowerReady(wosi)
-	SunFlowerLogic.farmSunflowers(3)
+	SunFlowerLogic.farmSunflowers(2)
 	
-	for i in range(3):
+	for i in range(2):
 		pumkinLogic.getPumkinGroundReady(wosi)
 		while not pumkinLogic.isPumkinCompleted(wosi):
 			pumkinLogic.maintainPumkins(wosi)
