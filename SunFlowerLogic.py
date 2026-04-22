@@ -5,9 +5,9 @@ def getSunflowerReady(sunflowerLines):
 	for i in range(sunflowerLines):
 		for j in range(get_world_size()):
 			harvest()
-			NewLogic.tillNonSoilGround(get_ground_type())
+			NewLogic.tillNonSoilGround()
 			plant(Entities.Sunflower)
-			regar.regar(get_water())
+			regar.regar()
 			move(North)
 		move(East)
 
@@ -19,9 +19,9 @@ def farmSunflowers(timesFarmingSunflowers):
 					harvest()
 					plant(Entities.Sunflower)
 				else:
-					NewLogic.untillSoilGround(get_ground_type())
+					NewLogic.untillSoilGround()
 					till()
 					plant(Entities.Sunflower)
-				regar.regar(get_water())
+				regar.regar()
 				move(North)
 			move(East)

@@ -6,7 +6,7 @@ def plantCarrot(carrotLines):
 			if can_harvest():
 				harvest()
 			plant(Entities.Carrot)
-			regar.regar(get_water())
+			regar.regar()
 			move(North)
 		move(East)
 
@@ -19,14 +19,14 @@ def plantTree(TreeLines):
 					plant(Entities.Tree)	
 			else:
 				harvest()
-			regar.regar(get_water())
+			regar.regar()
 			move(North)
 		move(East)
 
-def tillNonSoilGround(ground):
-	if ground != Grounds.Soil:
+def tillNonSoilGround():
+	if get_ground_type() != Grounds.Soil:
 		till()
 		
-def untillSoilGround(ground):
-	if ground == Grounds.Soil:
+def untillSoilGround():
+	if get_ground_type() == Grounds.Soil:
 		return till()

@@ -15,19 +15,19 @@ import pumkinLogic
 
 clear()
 wosi = get_world_size() # the world size
-carrotRows = 9 # filas de zanahorias
-treeRows = 13 # filas de arboles
+carrotRows = 10 # filas de zanahorias
+treeRows = 12 # filas de arboles
 
 while True:
 	
 	SunFlowerLogic.getSunflowerReady(wosi)
 	SunFlowerLogic.farmSunflowers(2)
 	
-	for i in range(2):
-		pumkinLogic.getPumkinGroundReady(wosi)
-		while not pumkinLogic.isPumkinCompleted(wosi):
-			pumkinLogic.maintainPumkins(wosi)
-		harvest()
+	
+	pumkinLogic.getPumkinGroundReady(wosi)
+	while not pumkinLogic.isPumkinCompleted(wosi):
+		pumkinLogic.maintainPumkins(wosi)
+	harvest()
 	getReady.getEverythingReady(carrotRows, treeRows)
 	for i in range(3):
 		NewLogic.plantCarrot(carrotRows)
