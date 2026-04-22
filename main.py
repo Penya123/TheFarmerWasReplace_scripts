@@ -1,7 +1,6 @@
 import getReady
 import NewLogic
 import SunFlowerLogic
-import pumkinLogic
 import pumkinsLogicV2
 
 # DESCRIPCIÓN DEL FLUJO
@@ -22,9 +21,9 @@ treeRows = 12 # filas de arboles
 while True:
 	
 	SunFlowerLogic.getSunflowerReady(wosi)
-	SunFlowerLogic.farmSunflowers(2)
+	SunFlowerLogic.farmSunflowers(1)
 	
-	pumkinsLogicV2(2)
+	pumkinsLogicV2.plantPumkin(2)
 	
 	getReady.getEverythingReady(carrotRows, treeRows)
 	for i in range(3):
