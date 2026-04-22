@@ -2,6 +2,7 @@ import getReady
 import NewLogic
 import SunFlowerLogic
 import pumkinLogic
+import pumkinsLogicV2
 
 # DESCRIPCIÓN DEL FLUJO
 # Primero se plantan girasoles en 
@@ -23,11 +24,8 @@ while True:
 	SunFlowerLogic.getSunflowerReady(wosi)
 	SunFlowerLogic.farmSunflowers(2)
 	
+	pumkinsLogicV2(2)
 	
-	pumkinLogic.getPumkinGroundReady(wosi)
-	while not pumkinLogic.isPumkinCompleted(wosi):
-		pumkinLogic.maintainPumkins(wosi)
-	harvest()
 	getReady.getEverythingReady(carrotRows, treeRows)
 	for i in range(3):
 		NewLogic.plantCarrot(carrotRows)
