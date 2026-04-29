@@ -23,9 +23,9 @@ while True:
 	SunFlowerLogic.getSunflowerReady(wosi)
 	SunFlowerLogic.farmSunflowers(1)
 	
-	pumkinsLogicV2.plantPumkin(2)
-	
 	getReady.getEverythingReady(carrotRows, treeRows)
 	for i in range(3):
 		NewLogic.plantCarrot(carrotRows)
 		NewLogic.plantTree(treeRows)
+	if num_items(Items.Fertilizer) >= (2 * get_world_size()):
+		pumkinsLogicV2.plantPumkin(1)

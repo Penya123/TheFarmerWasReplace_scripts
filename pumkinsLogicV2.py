@@ -10,7 +10,8 @@ def plantPumkin(times):
 				regar.regar()
 				while not can_harvest():
 					plant(Entities.Pumpkin)
-					use_item(Items.Fertilizer)
+					if random() > 0.5:
+						use_item(Items.Fertilizer)
 				move(North)
 			move(East)
 		harvest()

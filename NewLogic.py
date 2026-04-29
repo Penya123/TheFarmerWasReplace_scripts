@@ -29,4 +29,4 @@ def tillNonSoilGround():
 		
 def untillSoilGround():
 	if get_ground_type() == Grounds.Soil:
-		return till()
+		till()
